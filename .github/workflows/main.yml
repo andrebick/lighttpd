@@ -13,6 +13,11 @@ jobs:
   fuzz_default_campaign:
     runs-on: ubuntu-latest
     steps:
+      - run: echo '{"compaignRunId":"projects/85751354_github_lighttpd-223f0fe0/campaign_runs/busy_robinson"}' > ciFuzzRunInfo.json
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cifuzz-test-run
+          path: ciFuzzRunInfo.json
       - id: start-fuzzing
         name: Build And Start Fuzzing
         uses: CodeIntelligenceTesting/github-actions/start-fuzzing@master
