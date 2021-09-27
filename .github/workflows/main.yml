@@ -13,7 +13,7 @@ jobs:
   fuzz_default_campaign:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '{"compaignRunId":"projects/1384347_github_lighttpd-223f0fe0/campaign_runs/fervent_benz", "ciFuzzToken":"'${{ secrets.CI_FUZZ_API_TOKEN }}'"}' > ciFuzzRunInfo.json
+      - run: echo '{"compaignRunId":"projects/85751354_github_lighttpd-223f0fe0/campaign_runs/busy_robinson", "ciFuzzToken":"'${{ secrets.CI_FUZZ_API_TOKEN }}'"}' > ciFuzzRunInfo.json
       - uses: actions/upload-artifact@v2
         with:
           name: cifuzz-test-run
